@@ -1,0 +1,9 @@
+Version - 1.2 Release Notes (Release_Aug08) with a RTL Change Request.
+This release includes the following :
+
+Change in SPI Master/Slave Data Width
+SPI_ctrld1 and SPI_ctrld2 Slave Module Updated with Register giving only Stablized Output.
+
+Questions:
+current Default value after Reset for ctrld1: 0002.
+current Default value after Reset for ctrld2: 0000.
