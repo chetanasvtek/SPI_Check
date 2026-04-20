@@ -1,23 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- ===============================================================================-->
+<!-- Filename: ip_name.xml -->
+<!-- Purpose: This XML file defines the IP-XACT component -->
+<!--           for example_ip, including its memory map and register definitions. -->
+<!-- Author: Susmitha -->
+<!-- Date: 20/04/2026 -->
+<!--===============================================================================-->
+
+<!-- Top-level component definition for example_ip -->
 <component xmlns="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
     <vendor>your_company</vendor>
     <library>peripherals</library>
     <name>example_ip</name>
     <version>1.0</version>
+
+    <!-- Definition of memory maps for the component -->
     <memoryMaps>
+        <!-- Main register map for the IP -->
         <memoryMap>
             <name>reg_map</name>
+            <!-- Address block for the registers -->
             <addressBlock>
                 <name>block0</name>
                 <baseAddress>0x0000</baseAddress>
                 <range>0x100</range>
                 <width>32</width>
                 
+                <!-- CONTROL_RW Register: A read-write control register -->
                 <register>
                     <name>CONTROL_RW</name>
                     <addressOffset>0x00</addressOffset>
                     <size>32</size>
                     <access>read-write</access>
+                    <!-- Field: 32-bit data field -->
                     <field>
                         <name>data</name>
                         <bitOffset>0</bitOffset>
@@ -25,11 +40,13 @@
                     </field>
                 </register>
 
+                <!-- STATUS_RO Register: A read-only status register with a fixed value -->
                 <register>
                     <name>STATUS_RO</name>
                     <addressOffset>0x04</addressOffset>
                     <size>32</size>
                     <access>read-only</access>
+                    <!-- Field: 32-bit fixed value field, resets to 0xFF -->
                     <field>
                         <name>fixed_val</name>
                         <bitOffset>0</bitOffset>
@@ -38,11 +55,13 @@
                     </field>
                 </register>
 
+                <!-- DATA_WO Register: A write-only data register -->
                 <register>
                     <name>DATA_WO</name>
                     <addressOffset>0x08</addressOffset>
                     <size>32</size>
                     <access>write-only</access>
+                    <!-- Field: 32-bit input value field -->
                     <field>
                         <name>input_val</name>
                         <bitOffset>0</bitOffset>
