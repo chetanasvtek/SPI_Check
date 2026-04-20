@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component xmlns="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
+    <vendor>your_company</vendor>
+    <library>peripherals</library>
+    <name>example_ip</name>
+    <version>1.0</version>
+    <memoryMaps>
+        <memoryMap>
+            <name>reg_map</name>
+            <addressBlock>
+                <name>block0</name>
+                <baseAddress>0x0000</baseAddress>
+                <range>0x100</range>
+                <width>32</width>
+                
+                <register>
+                    <name>CONTROL_RW</name>
+                    <addressOffset>0x00</addressOffset>
+                    <size>32</size>
+                    <access>read-write</access>
+                    <field>
+                        <name>data</name>
+                        <bitOffset>0</bitOffset>
+                        <bitWidth>32</bitWidth>
+                    </field>
+                </register>
+
+                <register>
+                    <name>STATUS_RO</name>
+                    <addressOffset>0x04</addressOffset>
+                    <size>32</size>
+                    <access>read-only</access>
+                    <field>
+                        <name>fixed_val</name>
+                        <bitOffset>0</bitOffset>
+                        <bitWidth>32</bitWidth>
+                        <reset><value>0xFF</value></reset>
+                    </field>
+                </register>
+
+                <register>
+                    <name>DATA_WO</name>
+                    <addressOffset>0x08</addressOffset>
+                    <size>32</size>
+                    <access>write-only</access>
+                    <field>
+                        <name>input_val</name>
+                        <bitOffset>0</bitOffset>
+                        <bitWidth>32</bitWidth>
+                    </field>
+                </register>
+                
+            </addressBlock>
+        </memoryMap>
+    </memoryMaps>
+</component>
