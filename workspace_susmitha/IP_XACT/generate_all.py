@@ -1,4 +1,14 @@
+# -----------------------------------------------------------------------------
+# File Name: generate_all.py
+# Purpose: This script parses an IP-XACT XML file to generate synthesizable 
+#          SystemVerilog RTL for an APB register block and a corresponding 
+#          C header file for firmware development.
+# version: 1.0
+# Author: Susmitha
+# Date: 2024-05-22
+# -----------------------------------------------------------------------------
 import xml.etree.ElementTree as ET
+
 
 class IPXactFlow:
     def __init__(self, xml_file):
