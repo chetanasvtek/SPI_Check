@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ===============================================================================-->
+<!-- Filename: complex_ip.xml -->
+<!-- Purpose: This XML file defines the IP-XACT component -->
+<!--           for complex_ip, including its memory map and register definitions. -->
+<!-- Author: Susmitha -->
+<!-- Date: 20/04/2026 -->
+<!--===============================================================================-->
+<component xmlns="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
+    <vendor>your_company</vendor>
+    <library>peripherals</library>
+    <name>complex_ip_core</name>
+    <version>1.0</version>
+    <memoryMaps>
+        <memoryMap>
+            <name>reg_map</name>
+            <addressBlock>
+                <name>block0</name>
+                <baseAddress>0x0000</baseAddress>
+                <range>0x1000</range>
+                <width>32</width>
+
+                <register>
+                    <name>GLOBAL_CTRL</name>
+                    <addressOffset>0x00</addressOffset>
+                    <size>32</size>
+                    <access>read-write</access>
+                    <field><name>enable</name><bitOffset>0</bitOffset><bitWidth>1</bitWidth></field>
+                    <field><name>soft_reset</name><bitOffset>1</bitOffset><bitWidth>1</bitWidth></field>
+                    <field><name>mode_select</name><bitOffset>4</bitOffset><bitWidth>2</bitWidth></field>
+                    <field><name>int_en</name><bitOffset>8</bitOffset><bitWidth>1</bitWidth></field>
+                </register>
+
+                <register>
+                    <name>GLOBAL_STATUS</name>
+                    <addressOffset>0x04</addressOffset>
+                    <size>32</size>
+                    <access>read-only</access>
+                    <field><name>busy</name><bitOffset>0</bitOffset><bitWidth>1</bitWidth></field>
+                    <field><name>fifo_empty</name><bitOffset>1</bitOffset><bitWidth>1</bitWidth></field>
+                    <field><name>fifo_full</name><bitOffset>2</bitOffset><bitWidth>1</bitWidth></field>
+                    <field><name>error_state</name><bitOffset>8</bitOffset><bitWidth>4</bitWidth></field>
+                </register>
+
+                <register>
+                    <name>TIMER_CFG</name>
+                    <addressOffset>0x08</addressOffset>
+                    <size>32</size>
+                    <access>read-write</access>
+                    <field><name>prescaler</name><bitOffset>0</bitOffset><bitWidth>8</bitWidth></field>
+                    <field><name>auto_reload</name><bitOffset>16</bitOffset><bitWidth>1</bitWidth></field>
+                    <field><name>one_shot</name><bitOffset>17</bitOffset><bitWidth>1</bitWidth></field>
+                </register>
+
+                <register>
+                    <name>INT_CLR</name>
+                    <addressOffset>0x0C</addressOffset>
+                    <size>32</size>
+                    <access>write-only</access>
+                    <field><name>clr_tx</name><bitOffset>0</bitOffset><bitWidth>1</bitWidth></field>
+                    <field><name>clr_rx</name><bitOffset>1</bitOffset><bitWidth>1</bitWidth></field>
+                    <field><name>clr_err</name><bitOffset>2</bitOffset><bitWidth>1</bitWidth></field>
+                    <field><name>clr_all</name><bitOffset>31</bitOffset><bitWidth>1</bitWidth></field>
+                </register>
+
+                <register>
+                    <name>CLK_CTRL</name>
+                    <addressOffset>0x10</addressOffset>
+                    <size>32</size>
+                    <access>read-write</access>
+                    <field><name>div_factor</name><bitOffset>0</bitOffset><bitWidth>4</bitWidth></field>
+                    <field><name>src_sel</name><bitOffset>8</bitOffset><bitWidth>2</bitWidth></field>
+                    <field><name>gate_en</name><bitOffset>16</bitOffset><bitWidth>1</bitWidth></field>
+                </register>
+
+                <register>
+                    <name>ADC_CFG</name>
+                    <addressOffset>0x14</addressOffset>
+                    <size>32</size>
+                    <access>read-write</access>
+                    <field><name>sample_rate</name><bitOffset>0</bitOffset><bitWidth>10</bitWidth></field>
+                    <field><name>resolution</name><bitOffset>12</bitOffset><bitWidth>2</bitWidth></field>
+                    <field><name>vref_sel</name><bitOffset>16</bitOffset><bitWidth>1</bitWidth></field>
+                </register>
+
+                <register>
+                    <name>GPIO_DIR</name>
+                    <addressOffset>0x18</addressOffset>
+                    <size>32</size>
+                    <access>read-write</access>
+                    <field><name>port_a_dir</name><bitOffset>0</bitOffset><bitWidth>8</bitWidth></field>
+                    <field><name>port_b_dir</name><bitOffset>8</bitOffset><bitWidth>8</bitWidth></field>
+                    <field><name>pull_up_en</name><bitOffset>24</bitOffset><bitWidth>1</bitWidth></field>
+                </register>
+
+                <register>
+                    <name>FILTER_COEFF</name>
+                    <addressOffset>0x1C</addressOffset>
+                    <size>32</size>
+                    <access>read-write</access>
+                    <field><name>coeff_a</name><bitOffset>0</bitOffset><bitWidth>8</bitWidth></field>
+                    <field><name>coeff_b</name><bitOffset>8</bitOffset><bitWidth>8</bitWidth></field>
+                    <field><name>coeff_c</name><bitOffset>16</bitOffset><bitWidth>8</bitWidth></field>
+                    <field><name>bypass</name><bitOffset>31</bitOffset><bitWidth>1</bitWidth></field>
+                </register>
+
+                <register>
+                    <name>PROTO_SET</name>
+                    <addressOffset>0x20</addressOffset>
+                    <size>32</size>
+                    <access>read-write</access>
+                    <field><name>baud_rate</name><bitOffset>0</bitOffset><bitWidth>16</bitWidth></field>
+                    <field><name>parity</name><bitOffset>16</bitOffset><bitWidth>2</bitWidth></field>
+                    <field><name>stop_bits</name><bitOffset>20</bitOffset><bitWidth>1</bitWidth></field>
+                </register>
+
+                <register>
+                    <name>DEV_ID</name>
+                    <addressOffset>0x24</addressOffset>
+                    <size>32</size>
+                    <access>read-only</access>
+                    <field><name>ver_major</name><bitOffset>0</bitOffset><bitWidth>4</bitWidth></field>
+                    <field><name>ver_minor</name><bitOffset>4</bitOffset><bitWidth>4</bitWidth></field>
+                    <field><name>custom_tag</name><bitOffset>8</bitOffset><bitWidth>8</bitWidth></field>
+                    <field><name>fixed_id</name><bitOffset>16</bitOffset><bitWidth>16</bitWidth></field>
+                </register>
+
+            </addressBlock>
+        </memoryMap>
+    </memoryMaps>
+</component>
