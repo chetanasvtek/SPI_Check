@@ -3,3 +3,4 @@ ip_name.xml,"Source File: Contains the master definition of all registers, inclu
 generate_generic_rtl.py,Automation Tool: The Python script that parses the XML and generates the hardware and software deliverables .
 register_block.sv,"Hardware Output: Synthesizable SystemVerilog RTL. It uses a generic interface (Address, Data, Enable) to be compatible with APB, AHB, or SPI ."
 registers.h,Software Output: C Header file containing #define macros for all register offsets to be used in firmware development .
+generate_xml_to_excel.py,Documentation Tool: Python script that parses the XML and exports the register map and field information into an Excel spreadsheet.
