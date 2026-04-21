@@ -53,7 +53,7 @@ class IPXactFlow:
         print(f"Success: Register map exported to {filename}")
 
 if __name__ == "__main__":
-    if os.path.exists("ip_name.xml"):
-        flow = IPXactFlow("ip_name.xml")
+    if os.path.exists("complex_ip.xml"):
+        flow = IPXactFlow("complex_ip.xml")
         flow.parse()
         flow.generate_excel()
