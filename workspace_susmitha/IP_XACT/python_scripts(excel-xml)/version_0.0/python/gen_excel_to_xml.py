@@ -1,6 +1,6 @@
 ###################################################################################################
 
-# Filename: excel_to_xml_universal.py
+# Filename: gen_excel_to_xml.py
 # Purpose : This script converts Excel-based register maps into a structured XML format.
 #           It dynamically reads column headers from the Excel file and generates
 #           corresponding XML tags without any hardcoded field names.
@@ -15,7 +15,7 @@
 # Workflow:
 # Excel Register Map → Parse Headers → Group Rows → Generate XML → Save Output
 # Version : 0.0
-# Author  : Susmitha-
+# Author  : Susmitha
 # Date    : 24/04/2026
 
 ###################################################################################################
