@@ -38,7 +38,6 @@ module apb_register #(
                 16'h0004: wr_addr_hit = 1'b1;
                 16'h0008: wr_addr_hit = 1'b1;
                 16'h000C: wr_addr_hit = 1'b1;
-                16'h0010: wr_addr_hit = 1'b1;
                 16'h0014: wr_addr_hit = 1'b1;
             endcase
         end
