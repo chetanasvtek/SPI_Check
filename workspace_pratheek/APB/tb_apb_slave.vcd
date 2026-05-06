@@ -1,0 +1,129 @@
+$date
+	Wed May 06 13:27:28 2026
+$end
+$version
+	QuestaSim Version 10.7c
+$end
+$timescale
+	100ps
+$end
+
+$scope module tb_apb_slave $end
+$var reg 32 ! o_prdata [31:0] $end
+$var reg 1 " o_pslverr $end
+$var reg 1 # o_pready $end
+$var reg 1 $ o_hw_ctl $end
+
+$scope task apb_write $end
+$upscope $end
+
+$scope task apb_read $end
+$upscope $end
+
+$scope module dut $end
+$var parameter 32 % SW $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx !
+x"
+x#
+x$
+b100 %
+$end
+#50
+0"
+0#
+b0 !
+0$
+#350
+1#
+#450
+0#
+#750
+1#
+b10010001101000101011001111000 !
+#850
+0#
+#1050
+1#
+#1150
+0#
+#1450
+1#
+b0 !
+1"
+#1550
+0#
+0"
+#1750
+1#
+#1850
+0#
+#2150
+1#
+b11011110101011011111111011101101 !
+#2250
+0#
+#2450
+1#
+1"
+#2550
+0#
+0"
+#2850
+1#
+b11011110101011011011111011101111 !
+#2950
+0#
+#3250
+1#
+b1 !
+#3350
+0#
+#3550
+1#
+1"
+#3650
+0#
+0"
+#3850
+1#
+1"
+#3950
+0#
+0"
+#4150
+1#
+1"
+#4250
+0#
+0"
+#4450
+1#
+1"
+#4550
+0#
+0"
+#4750
+1#
+#4850
+0#
+#5150
+1#
+b0 !
+1"
+#5250
+0#
+0"
+#5450
+1#
+1"
+#5550
+0#
+0"
+#5850
+1#
+b10010001101000101011001111000 !
