@@ -1,7 +1,7 @@
 // Generated Register Block: apb_register
 import apb3_pkg::*;
 module apb_register #( 
-) (
+)(
     input  logic              i_clk,
     input  logic              i_resetn,
     // Register Interface
@@ -25,31 +25,27 @@ module apb_register #(
     logic [31:0] reg_dev_id_ro;
 
     // Address Decoding and Error Logic
-    logic rd_addr_hit;
-    logic wr_addr_hit;
+    logic addr_hit;
 
     always_comb begin
-        rd_addr_hit = 1'b0; // Default to hit, will be cleared if no match
-        wr_addr_hit = 1'b0; // Default to hit, will be cleared if no match
+        addr_hit = 1'b0; // Default to hit, will be cleared if no match
         if (i_reg_wr_en) begin
-            rd_addr_hit = 1'b1; // No read hit during write
             case (i_reg_addr)
-                16'h0000: wr_addr_hit = 1'b1;
-                16'h0004: wr_addr_hit = 1'b1;
-                16'h0008: wr_addr_hit = 1'b1;
-                16'h000C: wr_addr_hit = 1'b1;
-                16'h0014: wr_addr_hit = 1'b1;
+                16'h0000: addr_hit = 1'b1;
+                16'h0004: addr_hit = 1'b1;
+                16'h0008: addr_hit = 1'b1;
+                16'h000C: addr_hit = 1'b1;
+                16'h0014: addr_hit = 1'b1;
             endcase
         end
         else if (i_reg_rd_en) begin
-            wr_addr_hit = 1'b1; // No write hit during read
             case (i_reg_addr)
-                16'h0000: rd_addr_hit = 1'b1;
-                16'h0008: rd_addr_hit = 1'b1;
-                16'h000C: rd_addr_hit = 1'b1;
-                16'h0010: rd_addr_hit = 1'b1;
-                16'h0014: rd_addr_hit = 1'b1;
-                16'h0018: rd_addr_hit = 1'b1; // RO write
+                16'h0000: addr_hit = 1'b1;
+                16'h0008: addr_hit = 1'b1;
+                16'h000C: addr_hit = 1'b1;
+                16'h0010: addr_hit = 1'b1;
+                16'h0014: addr_hit = 1'b1;
+                16'h0018: addr_hit = 1'b1; // RO write
             endcase
         end   
     end
@@ -92,7 +88,7 @@ module apb_register #(
             endcase
         end
     assign o_reg_ready = 1'b1; // Always ready for simplicity
-    assign o_reg_error = (!rd_addr_hit || !wr_addr_hit);
+    assign o_reg_error = !addr_hit;
 
 
 endmodule
