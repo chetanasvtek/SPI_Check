@@ -22,6 +22,17 @@ module apb3_top (
     output logic [APB_DW-1:0]       o_prdata,
     output logic                    o_pready,
     output logic                    o_pslverr
+
+    // Exported Register Ports for Hardware Integration
+    output logic [31:0]               global_ctrl_o,
+    output logic [31:0]               command_wo_o,
+    output logic [31:0]               status_w1c_o,
+    output logic [31:0]               sticky_set_w1s_o,
+    output logic [31:0]               error_count_rc_o,
+    output logic [31:0]               polarity_tow_o,
+
+    input  logic [31:0]               dev_id_ro_i,     // RO Register input Signal
+    input  logic [31:0]               error_count_rc_i // RC Register input Signal
 );
 
     //--------------------------------------------------------------------------
@@ -80,7 +91,16 @@ module apb3_top (
 
         .o_reg_rdata  (reg_rdata),
         .o_reg_ready  (reg_ready),
-        .o_reg_error  (reg_error)
+        .o_reg_error  (reg_error),
+
+        .dev_id_ro_i       (dev_id_ro_i),
+        .error_count_rc_i  (error_count_rc_i),
+        .global_ctrl_o      (global_ctrl_o),
+        .command_wo_o       (command_wo_o),
+        .status_w1c_o       (status_w1c_o),
+        .sticky_set_w1s_o   (sticky_set_w1s_o),
+        .error_count_rc_o   (error_count_rc_o),
+        .polarity_tow_o     (polarity_tow_o)
     );
 
 endmodule
