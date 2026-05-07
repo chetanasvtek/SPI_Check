@@ -110,8 +110,8 @@ module apb_register #(
         endcase
     end
 
-    assign o_reg_ready = 1'b1; // Always ready for simplicity
-    assign o_reg_error = !addr_hit;
+    assign o_reg_ready = (i_reg_wr_en || i_reg_rd_en);
+    assign o_reg_error = (i_reg_wr_en || i_reg_rd_en) && !addr_hit;
 
     // Export Register Values to Output Ports
     assign global_ctrl_o     = reg_global_ctrl;
