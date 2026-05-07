@@ -55,7 +55,6 @@ module apb_register #(
                 16'h0004: addr_hit = 1'b0;
                 16'h0008: addr_hit = 1'b0;
                 16'h000C: addr_hit = 1'b0;
-                16'h0010: addr_hit = 1'b0;
                 16'h0014: addr_hit = 1'b0;
                 default : addr_hit = 1'b1;
             endcase
@@ -121,7 +120,7 @@ module apb_register #(
     end
 
     assign o_reg_ready = (i_reg_wr_en || i_reg_rd_en);
-    assign o_reg_error = (i_reg_wr_en || i_reg_rd_en) && addr_hit;
+    assign o_reg_error = addr_hit;
 
     // Export Register Values to Output Ports
     assign global_ctrl_o     = reg_global_ctrl;
