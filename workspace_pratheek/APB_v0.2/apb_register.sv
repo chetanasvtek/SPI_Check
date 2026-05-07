@@ -1,3 +1,11 @@
+//-----------------------------------------------------------------------------
+// Title         : APB Register Block
+// Description   : This module implements a register block that interfaces with an APB3 slave interface. 
+// It includes various types of registers (RW, RO, WO, W1C, W1S, RC, TOW) and handles read/write operations based on the APB protocol.
+// Version       : 0.3
+// Author        : Pratheek Shet
+// Date          : 07 May 2026
+//-----------------------------------------------------------------------------
 // Generated Register Block: apb_register
 import apb3_pkg::*;
 module apb_register #( 
