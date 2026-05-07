@@ -1,0 +1,180 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Git_Repository/SPI_Check/workspace_pratheek/APB_v0.2
+Xapb3_pkg
+Z1 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+!s110 1778145690
+!i10b 1
+!s100 K4k932@<mOI^LVkhEjmJ92
+IL8H@07[aZUF6oz5h1mUa<1
+VL8H@07[aZUF6oz5h1mUa<1
+S1
+R0
+w1778068135
+8.\apb3_pkg.sv
+F.\apb3_pkg.sv
+L0 9
+Z2 OL;L;10.7c;67
+r1
+!s85 0
+31
+Z3 !s108 1778145690.000000
+!s107 .\apb_register.sv|.\apb3_top.sv|.\apb3_slave_ip.sv|.\apb3_pkg.sv|
+Z4 !s90 -lint|.\apb3_pkg.sv|.\apb3_slave_ip.sv|.\apb3_top.sv|.\apb_register.sv|
+!i113 0
+Z5 o-lint -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 tCvgOpt 0
+vapb3_slave_if
+R1
+Z7 DXx4 work 8 apb3_pkg 0 22 L8H@07[aZUF6oz5h1mUa<1
+DXx4 work 21 apb3_slave_ip_sv_unit 0 22 :[O:GfFIP?F6gHjf9MRQ30
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 JOI8?;37d6@lzijKRHS[f3
+Ib`Jd;h62N;C0S3J5m`4<23
+!s105 apb3_slave_ip_sv_unit
+S1
+R0
+Z9 w1778066128
+Z10 8.\apb3_slave_ip.sv
+Z11 F.\apb3_slave_ip.sv
+Z12 L0 11
+R2
+31
+R3
+Z13 !s107 .\apb_register.sv|.\apb3_top.sv|.\apb3_slave_ip.sv|.\apb3_pkg.sv|
+R4
+!i113 0
+R5
+R6
+Xapb3_slave_ip_sv_unit
+R1
+R7
+V:[O:GfFIP?F6gHjf9MRQ30
+r1
+!s85 0
+!i10b 1
+!s100 LEl;nBA`>lLj7^hkL`=8J3
+I:[O:GfFIP?F6gHjf9MRQ30
+!i103 1
+S1
+R0
+R9
+R10
+R11
+L0 9
+R2
+31
+R3
+R13
+R4
+!i113 0
+R5
+R6
+vapb3_top
+R1
+R7
+DXx4 work 16 apb3_top_sv_unit 0 22 =`YYBf:gI@G72hV`3W<A<3
+R8
+r1
+!s85 0
+!i10b 1
+!s100 KQ4U7XnmD9fj`<o8EHl6J3
+IT2aEXm`U3`ez<>hASc^3V1
+!s105 apb3_top_sv_unit
+S1
+R0
+Z14 w1778133861
+Z15 8.\apb3_top.sv
+Z16 F.\apb3_top.sv
+R12
+R2
+31
+R3
+R13
+R4
+!i113 0
+R5
+R6
+Xapb3_top_sv_unit
+R1
+R7
+V=`YYBf:gI@G72hV`3W<A<3
+r1
+!s85 0
+!i10b 1
+!s100 bHzKcM>cIK7hURRb1C=@M3
+I=`YYBf:gI@G72hV`3W<A<3
+!i103 1
+S1
+R0
+R14
+R15
+R16
+Z17 L0 10
+R2
+31
+R3
+R13
+R4
+!i113 0
+R5
+R6
+vapb_register
+R1
+R7
+DXx4 work 20 apb_register_sv_unit 0 22 ^^1gMbnUHhnJV7aG40lXO2
+R8
+r1
+!s85 0
+!i10b 1
+!s100 ZWXKF63Mz`h`@^59WonHG1
+I6z0K;R[n@3fO`QKK8:[V=1
+!s105 apb_register_sv_unit
+S1
+R0
+Z18 w1778142798
+Z19 8.\apb_register.sv
+Z20 F.\apb_register.sv
+R12
+R2
+31
+R3
+R13
+R4
+!i113 0
+R5
+R6
+Xapb_register_sv_unit
+R1
+R7
+V^^1gMbnUHhnJV7aG40lXO2
+r1
+!s85 0
+!i10b 1
+!s100 gXe<aKW]4AUYad:R7Z_iA1
+I^^1gMbnUHhnJV7aG40lXO2
+!i103 1
+S1
+R0
+R18
+R19
+R20
+R17
+R2
+31
+R3
+R13
+R4
+!i113 0
+R5
+R6
