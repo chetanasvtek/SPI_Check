@@ -21,7 +21,7 @@ module apb3_top (
 
     output logic [APB_DW-1:0]       o_prdata,
     output logic                    o_pready,
-    output logic                    o_pslverr
+    output logic                    o_pslverr,
 
     // Exported Register Ports for Hardware Integration
     output logic [31:0]               global_ctrl_o,
